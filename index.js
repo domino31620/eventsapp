@@ -18,9 +18,9 @@ app.use(express.urlencoded({
 }));
 
 // DATABASE
-const dbSetup = require('./src/database/dbSetup');
+// const dbSetup = require('./src/database/dbSetup');
 
-dbSetup();
+// dbSetup;
 
 //Event Routes
 app.use('./events', eventsRouter);
