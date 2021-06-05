@@ -25,6 +25,14 @@ dbSetup;
 //Event Routes
 app.use('./events', eventsRouter);
 
+app.post("/signup", async (req, res) => {
+  let newUser = new User({
+    name: req.body.name,
+    password: req.body.password
+  });
+
+})
+
 //Server
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}...`);
