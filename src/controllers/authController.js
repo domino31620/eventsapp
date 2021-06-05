@@ -99,4 +99,8 @@ exports.loginUser = async (req, res) => {
 			message: err,
 		});
 	}
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 23c202cb90c5c6f04012964b08b3375e413ace57
