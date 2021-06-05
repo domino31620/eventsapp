@@ -5,4 +5,5 @@ const indexController = require('../controllers/indexController')
 router.get('/', indexController.redirect)
 router.get('/search?', indexController.search)
 
+
 module.exports = router
