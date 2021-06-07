@@ -6,19 +6,19 @@ const secret = 'reallysupersectretstring';
 const expiry = 3600;
 const saltRounds = 10;
 
-exports.newUserSignup = async (req, res) => {
+exports.signup = async (req, res) => {
 	try {
 		const existingUser = await user.findOne({ username: req.body.username });
 		if (!existingUser) {
-			const passwordIsHashed = await bcrypt.hash(req.body.password, saltRounds);
+			const emailHashed = await bcrypt.hash(req.body.email, saltRounds);
 
 			const newUser = await user.create({
 				firstName: req.body.firstName,
 				lastName: req.body.lastName,
 				username: req.body.username,
-				email: req.body.email,
+				email: req.body.emailHashed,
 				role: req.body.role,
-				password: passwordIsHashed,
+				password: req.body.password,
 			});
 			//Creating the Token
 			const token = jwt.sign(
@@ -53,17 +53,17 @@ exports.newUserSignup = async (req, res) => {
 	}
 };
 
-exports.loginUser = async (req, res) => {
+exports.login = async (req, res) => {
 	try {
 		const prevUser = await user.findOne({ username: req.body.username });
 
 		if (prevUser) {
-			const prevUserPassword = await bcrypt.compare(
-				req.body.password,
-				prevUser.password
+			const prevUserEmail = await bcrypt.compare(
+				req.body.email,
+				prevUser.email
 			);
 
-			if (prevUserPassword && req.body.email === prevUser.email) {
+			if (prevUserEmail && req.body.email === prevUser.email) {
 				const token = jwt.sign(
 					{
 						id: prevUser.id,
@@ -99,8 +99,4 @@ exports.loginUser = async (req, res) => {
 			message: err,
 		});
 	}
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 23c202cb90c5c6f04012964b08b3375e413ace57

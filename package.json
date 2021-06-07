@@ -1,7 +1,6 @@
 {
   "name": "eventsapp",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -128,38 +127,4 @@
     "url": "https://github.com/domino31620/eventsApp/issues"
   },
   "homepage": "https://github.com/domino31620/eventsApp#readme"
-=======
-  "description": "auth",
-  "main": "index.js",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "babel": "^6.23.0",
-    "bcrypt": "^5.0.1",
-    "express": "^4.17.1",
-    "module": "^1.1.0",
-    "mongoose": "^5.12.13",
-    "nodemon": "^2.0.7",
-    "require": "^0.4.4",
-    "start": "^5.1.0",
-    "update": "^0.4.2",
-    "yargs-parser": "^2.4.1"
-  },
-  "devDependencies": {
-    "morgan": "^1.10.0"
-  },
-  "scripts": {
-    "start": "nodemon index.js",
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ayandres/eventsApp.git"
-  },
-  "author": "alana andres",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ayandres/eventsApp/issues"
-  },
-  "homepage": "https://github.com/ayandres/eventsApp#readme"
->>>>>>> 23c202cb90c5c6f04012964b08b3375e413ace57
 }

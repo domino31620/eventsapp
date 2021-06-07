@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const url = `mongodb+srv://alanaandres:Solomon00@events.mhu4e.mongodb.net/events?retryWrites=true&w=majority`;
+const url = `mongodb+srv://dominiquenorris:Solomon00@events.mhu4e.mongodb.net/events?retryWrites=true&w=majority`;
 
 const connectionParams = {
     useNewUrlParser: true,
